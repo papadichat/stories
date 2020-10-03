@@ -38,13 +38,14 @@ function App() {
   const doSomethingWith = (value) => {
     console.log(value);
   };
-  console.log(filter === true);
+
   return (
     <CardCss>
       <SearchBar
         value={value}
         onChange={(newValue) => setValue(newValue)}
         onRequestSearch={() => doSomethingWith(value)}
+        onCancelSearch={() => setFilter(false)}
         style={{ width: "50%", margin: "auto" }}
       />
       <div className="stories-container">
