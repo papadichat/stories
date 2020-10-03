@@ -8,7 +8,10 @@ const CardCss = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    @media (max-width: 600px) {
+    @media (max-width: 400px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 401px) and (max-width: 600px) {
       grid-template-columns: repeat(2, 1fr);
     }
     @media (min-width: 601px) and (max-width: 1024px) {
